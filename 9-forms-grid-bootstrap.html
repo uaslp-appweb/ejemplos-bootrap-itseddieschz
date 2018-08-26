@@ -12,31 +12,50 @@
 
 <body>
     <div class="container">
-        <h1>Ejemplo Formulario Grid</h1>
 
-        <form class="bg-light">
-            <div class="form-row form-group">
-                <div class="col-md-6">
-                    <label for="">Usuario</label>
-                    <input class="form-control" type="text" name="" id="">
-                </div>
-                <div class="col-md-6"></div>
-                <label for="">Contraseña</label>
-                <input class="form-control" type="password" name="" id="">
-            </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input">
-                <label for="">Recordarme</label>
-            </div>
+        <div class="row">
+            <div class="col-6 p-4">
 
-            <div class="form-group">
-                <button class="btn btn-primary" type="submit" name="" id="">Iniciar Sesión</button>
-                <a class="btn" href="#">Recuperar Contraseña</a>
-            </div>
+                <div class="h3"><b>Sign In</b></div>
+                <div class="lead"><b>If yoy workplace integrates with Safari Single Sign On, sign in with just your email
+                        below. </b></div>
 
-    </div>
-    </form>
-    </div>
+                <form class="py-4">
+                    <div class="form-row form-group">
+                        <div class="col-12 mb-2">
+                            <input class="form-control text-white" type="text" name="" id="" placeholder="Email address or username">
+                        </div>
+                        <div class="col-12">
+                            <input class="form-control" type="password" name="" id="" placeholder="Password">
+                            <fieldset class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="" id="">
+                                    <label class="form-check-label"> Remember me?</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-row form-group text-center d-flex justify-content-between align-items-center">
+                        <div class="col-4">
+                            <input type="submit" class="btn btn-warning btn-block" name="" id="" value="Sign In">
+                        </div>
+                        <div class="col-4">
+                            <a class="text-warning nounderline" href="#">Forgot Password</a>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-6 p-4">
+                <div class="h3"><b>Not a Member?</b></div>
+                <a class="btn btn-sm btn-secondary" href="">Try it Free &raquo;</a>
+                <div class="text-muted">OR</div>
+                <a class="btn btn-sm btn-secondary" href="">Join Now &raquo;</a>
+            </div>
+        </div>
+
+
 
 </body>
 
