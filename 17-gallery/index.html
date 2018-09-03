@@ -14,44 +14,24 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container text-center">
     <h1>Galeria de imagenes</h1>
-
-    <div class="card-columns">
-      <div class="card">
-        <a href="#modal" data-toggle="modal"><img src="img/1.jpg" class="card-img-top" alt=""></a>
-        <div class="modal fade" id="modal">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <img src="img/1.jpg" class="card-img-top" alt="">
-            </div>
+    <div class="card-columns" id="ccolumns">
+      <!-- <div class="card">
+          <a href="#modal" data-toggle="modal">
+              <img src="img/1.jpg" alt="" class="card-img-top">
+          </a>
+          <div class="modal fade" id="modal">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                      <img src="img/1.jpg" alt="" class="img-fluid">
+                  </div>
+              </div>
           </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <a href="#modal2" data-toggle="modal"><img src="img/2.jpg" class="card-img-top" alt=""></a>
-        <div class="modal fade" id="modal2">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <img src="img/2.jpg" class="card-img-top" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
+      </div> -->
+      <!--Modal Card-->
     </div>
-
-
   </div>
-
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -61,6 +41,51 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+
+
+  <script>
+
+    var countFiles = 11;
+    var columns = document.getElementById("ccolumns");
+
+    for (var i = 1; i <= countFiles; i++) {
+
+      var card = document.createElement("div");
+      var a = document.createElement("a");
+      var img = document.createElement("img");
+      var imgF = document.createElement("img");
+      var modal = document.createElement("div");
+      var mdialog = document.createElement("div");
+      var mcontent = document.createElement("div");
+
+      img.setAttribute("class", "card-img-top");
+      img.setAttribute("src", "img/" + i + ".jpg");
+
+      imgF.setAttribute("class", "img-fluid");
+      imgF.setAttribute("src", "img/" + i + ".jpg");
+
+      a.appendChild(img);
+      a.setAttribute("href", "#modal" + i);
+      a.setAttribute("data-toggle", "modal");
+
+      mcontent.appendChild(imgF);
+      mcontent.setAttribute("class", "modal-content");
+
+      mdialog.appendChild(mcontent);
+      mdialog.setAttribute("class", "modal-dialog modal-dialog-centered modal-lg");
+
+      modal.appendChild(mdialog);
+      modal.setAttribute("class", "modal fade");
+      modal.setAttribute("id", "modal" + i);
+
+      card.appendChild(a);
+      card.appendChild(modal);
+      card.setAttribute("class", "card");
+
+      columns.appendChild(card);
+    }
+
+  </script>
 </body>
 
 </html>
